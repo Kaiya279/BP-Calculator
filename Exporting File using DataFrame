@@ -1,0 +1,19 @@
+#Export the csv File using DataFrame
+
+from pandas import DataFrame
+
+BP = {'Distolic': [70,75,80,72,90],
+        'Systolic': [122,135,112,108,123]
+        }
+
+df = DataFrame(BP, columns= ['Distolic', 'Systolic'])
+
+export_csv = df.to_csv ('F:\Priya\Python_Exercise\BP.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
+
+print (df)
+
+
+#Fetch the top five rows of the csv file.
+import pandas as pd
+data = pd.read_csv("F:\Priya\Python_Exercise\BP.csv")
+data.head()

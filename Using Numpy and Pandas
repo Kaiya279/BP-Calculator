@@ -1,0 +1,43 @@
+#Creating BP Calculator using Pandas and Numpy
+
+import pandas as pd
+import numpy as np
+# take user input
+user_input = input("Enter a for user input or b for retreiving one week bp record ")
+count = 0
+while (count < 3):
+    count=count+1;
+    if(user == 'a'):
+        distolic = int(input("Enter your diastolic bp "));
+        systolic = int(input("Enter your systolic bp "));
+        normal_dia = 80;
+        normal_sys = 120;
+        if(distolic <= normal_dia and systolic <= normal_sys):
+            print("Low BP");
+        elif(distolic >= normal_dia and systolic >= normal_sys):
+            print("High BP");
+        else :
+            print("Normal BP");
+    break;
+    elif(user =='b'):
+        data = pd.read_csv('F:\Priya\Python_Exercise\BP.csv')
+        distolic = pd.read_csv('F:\Priya\Python_Exercise\BP.csv', index_col = 0)
+        systolic = pd.read_csv('F:\Priya\Python_Exercise\BP.csv',index_col=1)
+        dia = np.array(distolic);
+        sys =np.array(systolic);
+        if(dia.any() <80 and sys.any() <120):
+            print("LOW BP Patient");
+        elif(dia.any() > 80 and sys.any() > 120):
+            print("HIGH BP Patient");
+        else :
+            print("Normal BP");
+    break;
+    else :
+        print('Successful Result');
+    break;
+    continue:
+print("Daily check up Required if BP is unbalanced")
+
+
+
+#

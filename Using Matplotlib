@@ -1,0 +1,12 @@
+#Create a visualization of your BP using matplotlib
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+label = ['LOW','HIGH']
+distolic = pd.read_csv('F:\Priya\Python_Exercise\BP.csv', index_col = 0)
+systolic = pd.read_csv('F:\Priya\Python_Exercise\BP.csv',index_col=1)
+dia = np.array(distolic);
+sys =np.array(systolic);
+plt.plot(dia,sys)
+plt.show()
